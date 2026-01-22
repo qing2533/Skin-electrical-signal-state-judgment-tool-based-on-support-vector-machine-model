@@ -1,10 +1,41 @@
-Skin-electrical-signal-state-judgment-tool-based-on-support-vector-machine-model
+# Skin-electrical-signal-state-judgment-tool-based-on-support-vector-machine-model
+Built on SVM algorithm, this tool extracts features from electrodermal activity (EDA) data to identify 3 emotional states (baseline/pleasure/stress), and supports custom binary/ternary classification for personalized needs.
 
+## Environment Requirements
+### Hardware
+- Processor: Intel Core i5+/AMD Ryzen 5+
+- Memory: ≥8GB RAM
+- Storage: ≥20GB free space (x86 architecture)
 
+### Software
+- OS: Windows 7+/macOS 10.15+/Linux (x86_64)
+- Runtime: PyCharm + Python 3.12
+- Dependencies: scikit-learn/pandas/numpy (install via `requirements.txt`)
 
+## Core Workflow
+1. Extract feature vectors from raw EDA CSV data
+2. Preprocess features and train SVM model (retrain optional)
+3. Batch predict new EDA data and output recognition results
 
-This tool is built on a Support Vector Machine (SVM) algorithm to create a multi-class classification model, which extracts features from physiological signals such as electrodermal activity (EDA) data to identify three emotional states: baseline, pleasure, and stress. It also supports custom binary or ternary classification scenarios for emotional recognition, catering to the personalized analytical needs of different users.
-To run the tool, your hardware should meet the following requirements: an Intel Core i5 or higher processor (or AMD Ryzen 5 or higher), a minimum of 8GB RAM, and at least 20GB of available hard disk space on an x86 architecture computer. For the software environment, it is compatible with Windows 7 or later, macOS 10.15 or later, and Linux (x86_64). We recommend using PyCharm as the integrated development environment, paired with Python 3.12 for both development and runtime. Core dependencies, including scikit-learn for the SVM model and pandas/numpy for data processing, can be installed via the provided requirements.txt file.
-The core workflow begins with feature extraction, where the tool automatically extracts feature vectors from raw physiological signal CSV files. Next, the extracted features undergo preprocessing, including filtering and cleaning. Then, the SVM multi-class classification model is trained using labeled emotional data (baseline, pleasure, stress), and users have the option to choose whether to retrain the model each time they use the tool. Finally, when new EDA data is uploaded, the tool applies the trained model to perform batch predictions and output the emotional state recognition results.
-For custom binary or ternary classification tasks targeting different emotional categories, follow these steps: First, place your custom raw physiological signal CSV files into the data folder in the project root directory. Then, open the eda_svm.py file and replace the default emotional labels (e.g., baseline/pleasure/stress) with your target emotional names. If you are working on a binary classification scenario, ensure you delete the code related to the third emotional category and its corresponding label configuration. After saving these changes, re-run the model training process to apply your custom settings.
-To get started quickly, first prepare your training data by placing the CSV datasets you want to use for training into the data folder, then run the eda_svm.py file. This will automatically execute feature extraction, data preprocessing, and SVM model training, with the trained model saved automatically. For prediction, place your EDA data CSV file into the han_experiment_test folder and rename it to 1.csv (this exact name is required). Run the main.py file to initiate batch prediction using the trained model, and once completed, you can find the emotional recognition results in the result folder.
+## Custom Classification Setup
+1. Place custom EDA CSV data into `data` folder
+2. Modify `eda_svm.py` to replace default emotional labels
+3. For binary classification: Delete the 3rd category's code/config
+4. Re-run model training to apply changes
+
+## Quick Start
+### Model Training
+1. Put training CSV files into `data` folder
+2. Run `eda_svm.py` (model saved automatically)
+
+### Emotion Prediction
+1. Rename EDA CSV to `1.csv` and put into `han_experiment_test`
+2. Run `main.py` for batch prediction
+3. Check results in `result` folder
+
+## Notes
+- Refer to the user manual and demonstration video in the project for detailed guidance
+- Ensure prediction data is CSV (same structure as training data)
+- Avoid Chinese/special characters in file paths/names
+- For binary classification: Remove the 3rd class config to prevent training errors
+
