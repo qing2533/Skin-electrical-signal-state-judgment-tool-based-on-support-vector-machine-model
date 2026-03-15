@@ -63,6 +63,14 @@ Built on SVM algorithm, this tool extracts features from electrodermal activity 
 
 - For binary classification: Remove the 3rd class config to prevent training errors
 
+## About the Author & Project Declaration
+
+- Affiliation: Delaware State University (特拉华州立大学)
+
+- Project Owner: This tool is independently developed and maintained by Zhang Hanwen , for academic research use.
+
+- Contact Email: 18583074836@163.com
+
 ---
 
 # 基于支持向量机模型的皮肤电信号状态判断工具
@@ -130,3 +138,12 @@ Built on SVM algorithm, this tool extracts features from electrodermal activity 
 - 文件路径/名称中避免包含中文及特殊字符
 
 - 若为二分类：请删除第三类的配置，避免训练报错
+
+## 作者及项目声明
+
+- 所属单位：特拉华州立大学（Delaware State University）
+
+- 项目归属：本工具由本人独立开发与维护，用于学术研究用途。
+
+- 联系邮箱：18583074836@163.com
+​
