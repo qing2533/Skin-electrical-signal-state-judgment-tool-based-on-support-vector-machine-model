@@ -65,7 +65,7 @@ Built on SVM algorithm, this tool extracts features from electrodermal activity 
 
 ## About the Author & Project Declaration
 
-- Affiliation: Delaware State University (特拉华州立大学)
+- Affiliation: Delaware State University
 
 - Project Owner: This tool is independently developed and maintained by Zhang Hanwen , for academic research use.
 
